@@ -1,0 +1,115 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>CreditSuisse</groupId>
+  <artifactId>CreditSuisseTest</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>CreditSuisseTest</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+  	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  	
+  	<checkstyle.version>8.8</checkstyle.version>
+    <findbugs-maven-plugin.version>3.0.2</findbugs-maven-plugin.version>
+    
+    <java.version>11</java.version>
+    <junit.jupiter.version>5.4.2</junit.jupiter.version>
+    <junit.platform.version>5.4.2</junit.platform.version>
+    
+    <maven.compiler.source>${java.version}</maven.compiler.source>
+	<maven.compiler.target>${java.version}</maven.compiler.target>
+    
+    <user.name>Java Developer</user.name>
+  </properties>
+
+  <dependencies>
+   <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <version>${junit.jupiter.version}</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-engine</artifactId>
+        <version>${junit.jupiter.version}</version>
+        <scope>test</scope>
+    </dependency>
+    
+    <!--dependency>
+	    <groupId>org.junit.jupiter</groupId>
+	    <artifactId>junit-jupiter-engine</artifactId>
+	    <version>${junit.jupiter.version}</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.junit.platform</groupId>
+	    <artifactId>junit-platform-runner</artifactId>
+	    <version>${junit.platform.version}</version>
+	    <scope>test</scope>
+	</dependency-->
+    
+    
+    <!--dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency-->
+  <!-- https://mvnrepository.com/artifact/junit/junit -->
+	<!--dependency>
+	    <groupId>junit</groupId>
+	    <artifactId>junit</artifactId>
+	    <version>4.12</version>
+	    <scope>test</scope>
+	</dependency-->
+    
+  </dependencies>
+  
+	<build>
+	    <plugins>
+	        <plugin>
+	            <groupId>org.apache.maven.plugins</groupId>
+	            <artifactId>maven-surefire-plugin</artifactId>
+	            <version>2.22.1</version>
+	        </plugin>
+	    </plugins>
+	</build>
+  
+  
+  <reporting>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-checkstyle-plugin</artifactId>
+            <version>3.0.0</version>
+            <configuration>
+                <configLocation>checkstyle.xml</configLocation>
+            </configuration>
+        </plugin>
+    </plugins>
+</reporting>
+
+	<licenses>
+	    <license>
+	        <name>Credit Suisse</name>
+	        <distribution>Proprietary to Credit Suisse</distribution>
+	    </license>
+	</licenses>
+	
+	<inceptionYear>2019</inceptionYear>
+	<organization>
+	  	<name>Credit Suisse</name>
+	</organization>
+  
+  <developers>
+	<developer>
+	  <id>tommy_cusack@hotmail.com</id>
+	  <name>Tommy Cusack</name>
+	</developer>
+  </developers>
+  
+</project>
